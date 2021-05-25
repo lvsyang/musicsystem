@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+
+
+
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<meta name="keywords" content="Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<!--Google Fonts-->
+<link href='http://fonts.useso.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<!--Google Fonts-->
+
+
+
+
+</head>
+<body>
+
+<script language="javascript">
+function check() {
+	
+	if(form.uid.value=="请输入用户id") {
+		alert("用户id不为空");
+		form.uid.focus();
+		return false;
+	}
+	
+	if(form.password.value=="password") {
+		alert("密码不为空");
+		form.password.focus();
+		return false;	
+	}
+}
+</script>
+
+<div class="login">
+	<h2>欢迎来到音乐后台管理登录界面</h2>
+	<div class="login-top">
+		<h1>登   录</h1>
+		<form name="form" action="loginServlet">
+			<input type="text" id="uid" name="uid" value="请输入用户id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'uid';}">
+			<input type="password" name="password" value="password"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+			
+	    
+	    <div class="forgot">
+	    	<!--  <a href="#">forgot Password</a>  -->
+	    	<input type="submit" value="登录" onClick="return check();" />
+	    	<!--  <a href="register.jsp">点这里，注册新用户</a>
+	    	<a href="Jumpinfiveseconds.jsp">666666</a>-->
+	    </div>
+	</div></form>
+	<div class="login-bottom">
+		<h3>点这里 &nbsp;<a href="rrr.jsp">注册</a>&nbsp 新用户</h3>
+	</div>
+</div>	
+
+
+
+</body>
+</html>

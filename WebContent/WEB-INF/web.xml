@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>TestWeb201860202</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 2018.11.12 my -->
+  <servlet>
+  <servlet-name>TestServlet1</servlet-name>
+  <servlet-class>TestServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>TestServlet1</servlet-name>
+  <url-pattern>/testServlet1</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>AuthorityFilter</filter-name>
+    <filter-class>cn.edu.lingnan.filter.AuthorityFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>AuthorityFilter</filter-name>
+  <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+  <filter>
+     <filter-name>CharacterFilter</filter-name>
+     <filter-class>cn.edu.lingnan.filter.CharacterFilter</filter-class>
+     <init-param>
+        <param-name>newcharset</param-name>
+        <param-value>gb2312</param-value>     
+     </init-param>
+  
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/registerServlet</url-pattern>
+  <url-pattern>/admin/registerServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+  <servlet-name>FindAllUserServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.FindAllUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FindAllUserServlet</servlet-name>
+  <url-pattern>/admin/findAllUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>UpdateUserServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UpdateUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UpdateUserServlet</servlet-name>
+  <url-pattern>/admin/updateUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>MusicUpdateServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.MusicUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MusicUpdateServlet</servlet-name>
+  <url-pattern>/admin/music/musicUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>DeleteUserServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DeleteUserServlet</servlet-name>
+  <url-pattern>/admin/deleteUser</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>MusicDeleteServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.MusicDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MusicDeleteServlet</servlet-name>
+  <url-pattern>/admin/deleteMusic</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 用户销号 -->
+  <servlet>
+  <servlet-name>UserDeleteServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UserDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserDeleteServlet</servlet-name>
+  <url-pattern>/user/deleteUser</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  <servlet-name>BanUserServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.BanUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BanUserServlet</servlet-name>
+  <url-pattern>/admin/banUser</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  <servlet-name>MusicBanServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.MusicBanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MusicBanServlet</servlet-name>
+  <url-pattern>/admin/banMusic</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  <servlet-name>UbanUserServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UbanUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UbanUserServlet</servlet-name>
+  <url-pattern>/admin/ubanUser</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>MusicUbanServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.MusicUbanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MusicUbanServlet</servlet-name>
+  <url-pattern>/admin/ubanMusic</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <filter>
+     <filter-name>UserAuthorityFilter</filter-name>
+     <filter-class>cn.edu.lingnan.filter.UserAuthorityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+     <filter-name>UserAuthorityFilter</filter-name>
+     <url-pattern>/user/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>UserUpdateServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.UserUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserUpdateServlet</servlet-name>
+  <url-pattern>/user/userUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>LmusicAddServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.LmusicAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LmusicAddServlet</servlet-name>
+  <url-pattern>/user/lmusicadd</url-pattern>
+  </servlet-mapping>
+
+
+
+  <servlet>
+  <servlet-name>LmusicDislikeServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.LmusicDislikeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LmusicDislikeServlet</servlet-name>
+  <url-pattern>/user/lmusicDislike</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  <servlet-name>PlayMusicServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.PlayMusicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>PlayMusicServlet</servlet-name>
+  <url-pattern>/user/playmusic</url-pattern>
+  <url-pattern>/user/playmusics</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

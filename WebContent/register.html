@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>注册</title>
+<script language="javascript">
+function check() {
+	var regm1=/^[a-zA-z0-9_]+$/;
+	
+	
+	if(form.userid.value=="") {
+		alert("用户id不为空");
+		form.userid.focus();
+		return false;
+	}
+	
+	
+	
+	if(form.username.value=="") {
+		alert("姓名不为空");
+		form.username.focus();
+		return false;
+	}
+	if(!form.username.value.match(regm1)) {
+		alert("姓名格式不正确");
+		form.username.focus();
+		return false;		
+	}
+	if(form.password.value=="") {
+		alert("密码不为空");
+		form.password.focus();
+		return false;	
+	}
+	if(form.password2.value=="") {
+		alert("密码不为空");
+		form.password2.focus();
+		return false;	
+	}
+	if(form.password.value!=form.password2.value) {
+		alert("密码不相同");
+		form.password2.value="";
+		form.password2.focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<form action="registerServlet">
+  <table width="450"  height="150">
+  
+  <tr>
+   <td width="42%" align="right">用户id</td>
+   <td width="%8"></td>
+   <td width="%50">
+    <input type="text" name="userid" id="userid">
+    <font color="red">*</font>
+   </td>
+  </tr>
+  
+  <tr>
+   <td width="42%" align="right">用户名</td>
+   <td width="%8"></td>
+   <td width="%50">
+    <input type="text" name="username" id="username">
+    <font color="red">*</font>
+   </td>
+  </tr>
+  
+  
+  
+  
+  <tr>
+   <td class="item" align="right">密码</td>
+   <td></td>
+   <td>
+    <input type="password" name="password" id="password">
+    <font color="red">*</font>
+   </td>
+  </tr>
+  <tr>
+   <td class="item" align="right">密码确认</td>
+   <td></td>
+   <td>
+    <input type="password" name="password2" id="password2">
+    <font color="red">*</font>
+   </td>
+  </tr>
+  <tr>
+    <td class="item" align="right">权限</td>
+    <td></td>
+    <td>
+     <select name="superuser">
+     <option value="2" selectd>普通用户
+     <!-- <option value="1">一般管理员 -->  
+     </select>
+     <font color="red">*</font>
+    </td>
+   </tr>
+   <tr>
+    <td colspan="3" align="center">
+     <input type="submit" value="注册" onClick="check();" />
+     <input type="Reset" value="取消" />
+    </td>
+   </tr>  
+  </table>
+ </form>
+</body>
+</html>
